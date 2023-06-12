@@ -1,7 +1,17 @@
 import React from 'react'
+import Hero from '../components/Hero'
+import Banner from '../components/Banner'
+import { Link } from 'react-router-dom'
 
-export default function Error () {
+export default function Error() {
   return (
-    <div>hello from  Error Page </div>
+    <Hero>
+      <Banner title={"404"} subtitle={"Page-Not-Found"}>
+        <Link to={"/"} className='error'>
+          Return-Home
+        </Link>
+
+      </Banner>
+    </Hero>
   )
 }
